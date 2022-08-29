@@ -1,0 +1,24 @@
+##################################################
+# ANOVA-Three-way Testing START
+##################################################
+
+
+import  pandas as pd
+import researchpy as rp
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
+
+df = pd.read_csv("anova1.csv")
+print(rp.summary_cont(df1[["A","D", "V"]]))
+
+
+#perform three-way ANOVA
+model = ols("""E ~ C(A) + C(D) + C(V) +
+               C(A):C(D) + C(V):C(D) + C(A):C(V) +
+               C(A):C(V):C(D)""", data=df).fit()
+
+c = print(sm.stats.anova_lm(model, typ=2))
+
+##################################################
+# ANOVA-Three-way Testing END
+##################################################
