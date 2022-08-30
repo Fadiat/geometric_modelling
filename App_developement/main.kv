@@ -1,0 +1,97 @@
+MDScreen:
+
+    md_bg_color:0,40/255,81/255,1
+    MDBoxLayout:
+        orientation:'vertical'
+        Image:
+            source:'images/Imperial_White.png'
+            allow_stretch: True
+            keep_ratio: True
+            pos_hint:{"x": 0.07, "top":.95}
+            size_hint:0.8, 0.2
+
+        MDBoxLayout:
+            size_hint_y:.12
+            padding:dp(25)
+            MDBoxLayout:
+                orientation:"vertical"
+                MDLabel:
+                    font_style:"H3"
+                    markup: True
+                    text:"[b] Predictive Modelling"
+                MDBoxLayout:
+                    adaptive_size:True
+                    spacing:dp(10)
+                    MDLabel:
+                        text_size:None,None
+                        adaptive_width:True
+        MDGridLayout:
+            size_hint_y:.75
+            cols:2
+            padding:[dp(15),dp(15),dp(15),dp(35)]
+            spacing:dp(15)
+            ElementCard:
+                image:"images/unit.png"
+                text:"Unit Cell"
+                items_count:"L X W X H"
+                subtext:"Type (BCC,FCC, and Octet)"
+
+            ElementCard:
+                image:"images/mesh.png"
+                text:"FE Simulation"
+                items_count:""
+                subtext:"Accurate simulation with surface features"
+            ElementCard:
+                image:"images/powder.png"
+                text:"Material Properties"
+                subtext:"AlSi2Mg, AlSi10Mg, and Ti-6Al-4V"
+                items_count:"Optional"
+
+            ElementCard:
+                image:"images/printer.png"
+                text:"Printer Type"
+                size_hint:0.8, 0.2
+                subtext:"SLA, SLM, EBM, and FDM"
+                items_count:"Optional"
+
+
+
+            ElementCard:
+                image:"images/ezgif.png"
+                text:"Change Email"
+                subtext:"Settings"
+                items_count:""
+
+            ElementCard:
+                image:"images/todo.png"
+                text:"Advanced Options"
+                subtext:"Lattice Grading"
+                items_count:"Optional"
+
+<ElementCard@MDCard>:
+    md_bg_color:69/255,55/255,86/255,1
+    padding:dp(15)
+    spacing:dp(15)
+    radius:dp(35)
+    ripple_behavior: True
+    image:''
+    text:""
+    items_count:""
+    subtext:''
+
+    orientation:'vertical'
+    Image:
+        source:root.image
+    MDBoxLayout:
+        orientation:'vertical'
+        MDLabel:
+            halign:"center"
+            text:root.text
+            font_style:"H6"
+        MDLabel:
+            halign:"center"
+            font_style:"Caption"
+            text:root.subtext
+        MDLabel:
+            halign:"center"
+            text:root.items_count

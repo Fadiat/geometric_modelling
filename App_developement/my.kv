@@ -1,0 +1,419 @@
+EmptyWindow:
+    Parameter:
+<CreateAccountWindow>:
+    name: "create"
+
+    namee: namee
+    email: email
+    password: passw
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "Already have an Account? Log In"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.15
+            text: "Submit"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.submit()
+
+<Login2Window>:
+    name: "login2"
+
+    email: email
+    password: password
+
+    FloatLayout:
+
+        Label:
+            text:"Email: "
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.1, "top":0.9}
+            size_hint: 0.35, 0.15
+
+        TextInput:
+            id: email
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            pos_hint: {"x": 0.45 , "top":0.9}
+            size_hint: 0.4, 0.15
+
+        Label:
+            text:"Password: "
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.1, "top":0.7}
+            size_hint: 0.35, 0.15
+
+        TextInput:
+            id: password
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            password: True
+            pos_hint: {"x": 0.45, "top":0.7}
+            size_hint: 0.4, 0.15
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.2
+            font_size: (root.width**2 + root.height**2) / 13**4
+            text: "Login"
+            on_release:
+                root.manager.transition.direction = "up"
+                root.loginBtn()
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.3}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "Don't have an Account? Create One"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.createBtn()
+
+<LoginWindow>:
+    name: "login"
+
+    email: email
+    password: password
+
+    FloatLayout:
+
+        Label:
+            text:"Email: "
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.1, "top":0.9}
+            size_hint: 0.35, 0.15
+
+        TextInput:
+            id: email
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            pos_hint: {"x": 0.45 , "top":0.9}
+            size_hint: 0.4, 0.15
+
+        Label:
+            text:"Password: "
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.1, "top":0.7}
+            size_hint: 0.35, 0.15
+
+        TextInput:
+            id: password
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            password: True
+            pos_hint: {"x": 0.45, "top":0.7}
+            size_hint: 0.4, 0.15
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.2
+            font_size: (root.width**2 + root.height**2) / 13**4
+            text: "Login"
+            on_release:
+                root.manager.transition.direction = "up"
+                root.loginBtn()
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.3}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "Don't have an Account? Create One"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.createBtn()
+
+
+<MainWindow>:
+    n: n
+    email: email
+    created:created
+
+    FloatLayout:
+
+        Image:
+            source:'Imperial_White.png'
+            allow_stretch: True
+            keep_ratio: True
+            pos_hint:{"x": 0.1, "top":.95}
+            size_hint:0.8, 0.2
+
+        Label:
+            markup: True
+            id: sum
+            pos_hint:{"x": 0.1, "top":.8}
+            size_hint:0.8, 0.2
+            font_size: (root.width**2 + root.height**2) / 14**4
+            text: "[color=#a12c3c][b]Account Summary"
+        Label:
+            id: n
+            markup: True
+            pos_hint:{"x": 0.1, "top":0.7}
+            size_hint:0.8, 0.2
+            text: "Account Name: "
+
+        Label:
+            id: email
+            pos_hint:{"x": 0.1, "top":0.6}
+            size_hint:0.8, 0.2
+            text: "Email: "
+
+        Label:
+            id: created
+            pos_hint:{"x": 0.1, "top":0.5}
+            size_hint:0.8, 0.2
+            text: "Created: "
+
+        Button:
+            pos_hint:{"x":0.2, "y": 0.05}
+            size_hint:0.6,0.1
+            text: "Log Out"
+            on_release:
+                app.root.current = "login"
+                root.manager.transition.direction = "down"
+
+        Button:
+            pos_hint:{"x":0.2, "y": 0.2}
+            size_hint:0.6,0.1
+            text: "Proceed"
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "left"
+
+
+<SecondWindow>:
+    name: "second"
+
+    GridLayout:
+        cols:1
+
+        GridLayout:
+            cols: 2
+
+        Button:
+            text: "Go Back to summary"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+        Button:
+            text: "Parameter option"
+            on_release:
+                app.root.current = "parameter"
+                root.manager.transition.direction = "left"
+
+
+        Button:
+            text: "Drawing Box"
+            on_release:
+                app.root.current = "empty_2"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "Logout"
+            on_release:
+                root.play_music()
+                app.root.current = "login"
+                root.manager.transition.direction = "down"
+
+<EmptyWindow>:
+    name: "empty"
+
+    GridLayout:
+        cols:1
+
+        GridLayout:
+            cols: 2
+
+<Parameter>
+    name: "real_page"
+    diameter: diameter
+    angle: angle
+    printer: printer
+    material: material
+
+    GridLayout:
+        padding: 20
+        cols:1
+
+        GridLayout:
+
+            cols:2
+
+            Label:
+                text: "Diameter: "
+                font_size: (root.width**2 + root.height**2) / 16**4
+                pos_hint:{"x":0.1, "y": .9}
+                size_hint:0.6,0.1
+
+            TextInput:
+                multiline: False
+                id: diameter
+                pos_hint:{"x":0.1, "y": .9}
+                size_hint:0.6,0.1
+
+            Label:
+                text: "Angle: "
+                font_size: (root.width**2 + root.height**2) / 16**4
+                pos_hint:{"x":0.2, "y": .7}
+                size_hint:0.6,0.1
+
+            TextInput:
+                multiline: False
+                id: angle
+                pos_hint:{"x":0.2, "y": .7}
+                size_hint:0.6,0.1
+
+            Label:
+                text: "Select printing type: "
+                font_size: (root.width**2 + root.height**2) / 16**4
+
+            GridLayout:
+                cols:4
+
+                Label:
+                    text: "SLM"
+                    id: printer
+                CheckBox:
+                    on_active: root.checkbox_click(self, self.active, "SLM")
+
+                Label:
+                    text: "EBM"
+                    id: printer
+                CheckBox:
+                    on_active: root.checkbox_click(self, self.active, "EBM")
+
+                Label:
+                    text: "SLA"
+                    id: printer
+                CheckBox:
+                    on_active: root.checkbox_click(self, self.active, "SLA")
+
+
+                Label:
+                    text: "FDM"
+                    id: printer
+                CheckBox:
+                    on_active: root.checkbox_click(self, self.active, "FDM")
+
+            Label:
+                id: SLM
+
+
+
+            Label:
+                text: "Material: "
+                font_size: (root.width**2 + root.height**2) / 16**4
+                id: material
+                CheckBox:
+                    on_active: root.checkbox_click(self, self.active)
+
+            GridLayout:
+                cols:4
+
+                Label:
+                    text: "AlSi10Mg"
+                    id: printer
+                CheckBox:
+                    on_active: root.material_checkbox_click(self, self.active, "AlSi10Mg")
+
+                Label:
+                    text: "AlSi2Mg"
+                    id: printer
+                CheckBox:
+                    on_active: root.material_checkbox_click(self, self.active, "AlSi2Mg")
+
+                Label:
+                    text: "Poly"
+                    id: printer
+                CheckBox:
+                    on_active: root.checkbox_click(self, self.active, "ply")
+
+
+                Label:
+                    text: "resin_type"
+                    id: printer
+                CheckBox:
+                    on_active: root.checkbox_click(self, self.active, "resin_type")
+
+            Label:
+                id: material
+
+
+
+
+
+        Button:
+            text: "Submit"
+            on_press: root.btn()
+            pos_hint:{"x":0.2, "y": 0.2}
+            size_hint:0.6,0.1
+            font_size: (root.width**2 + root.height**2) / 16**4
+
+        Button:
+            text: "Go Back to summary"
+            pos_hint:{"x":0.2, "y": 0.2}
+            size_hint:0.6,0.1
+            font_size: (root.width**2 + root.height**2) / 16**4
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"

@@ -1,0 +1,9 @@
+tim@gmail.com;1234;tim;2019-03-02
+fadi@aa.com;Fadi@0879d;Fadi;2022-05-11
+fadi@atallah.co.uk;Fadi@0795294118;fadi;2022-05-11
+@.;@.;Fadi;2022-05-11
+y.khatib1@hotmail.com;y=1212;Yazan Al-Khatib;2022-05-11
+munirzughair@hotmail.com;12345;munir;2022-05-11
+yh1021@ic.ac.uk;19981219;ybh;2022-06-10
+asd@f.com;asd;fadi;2022-08-30
+fadi.atallah21@imperial.ac.uk;fa;Fadi Atallah;2022-08-30
